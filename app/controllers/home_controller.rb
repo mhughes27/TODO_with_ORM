@@ -1,5 +1,6 @@
 MyApp.get "/" do
 
+
 # basic functions
 @tasks = Tasks.new.all_tasks
 @incomplete = Tasks.new.incomplete_tasks
