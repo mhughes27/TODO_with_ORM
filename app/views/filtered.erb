@@ -1,0 +1,42 @@
+<div class="mainContent">
+
+<h1><%= @member %>'s Tasks</h1>
+
+<% @filtered_todo.each do |element| %>
+	<ul>
+		<li><%= element["name"] %></li>
+		<li><%= element["description"] %></li>
+		<form method="post" action="/edit"> 
+			<input type="hidden" name="name" value="<%= element["name"] %>">
+			<input type="hidden" name="description" value="<%= element["description"] %>">
+			<input type="hidden"  name="task_id" value="<%= element["task_id"] %>">
+			<input type="hidden"  name="status" value="<%= element["status"] %>">
+			<input type="submit" value="Edit">
+		</form>
+		<form method="post" action="/delete"> 
+			<input type="hidden"  name="task_id" value="<%= element["task_id"] %>">
+			<input type="submit" value="Delete">
+		</form>
+	</ul>
+<% end %>
+
+<h1 class="ListTitle">Completed Tasks</h1>
+<% @filtered_done.each do |element| %>
+	<ul>
+		<li><%= element["name"] %></li>
+		<li><%= element["description"] %></li>
+		<form method="post" action="/edit"> 
+			<input type="hidden" name="name" value="<%= element["name"] %>">
+			<input type="hidden" name="description" value="<%= element["description"] %>">	
+			<input type="hidden"  name="task_id" value="<%= element["task_id"] %>">
+			<input type="hidden"  name="status" value="<%= element["status"] %>">
+			<input type="submit" value="Edit">
+		</form>
+		<form method="post" action="/delete"> 
+			<input type="hidden"  name="task_id" value="<%= element["task_id"] %>">
+			<input type="submit" value="Delete">
+		</form>
+	</ul>
+<% end %>
+
+</div>

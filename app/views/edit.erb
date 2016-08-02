@@ -1,0 +1,54 @@
+<form method="post" action="/edit/process" >
+		<div>
+			<input type="text" name="description" value=" <%= @description %>">
+		</div>
+
+		<div>
+		  <label>
+		   <input type="radio" name="name" value="Bob" <%= "checked" if @name == "Bob" %> >
+		    Bob
+		  </label>
+		</div>
+
+		<div>
+		  <label>
+		    <input type="radio" name="name" value="Mary" <%= "checked" if @name == "Mary" %> >
+		    Mary
+		  </label>
+		</div>
+
+		<div>
+		  <label>
+		    <input type="radio" name="name" value="Joe" <%= "checked" if @name == "Joe" %> >
+		    Joe
+		  </label>
+		</div>
+
+		<div>
+		  <label>
+		    <input type="radio" name="name" value="Lisa" <%= "checked" if @name == "Lisa" %> >
+		    Lisa
+		  </label>
+		</div>
+		<div>
+			<p>Status</p>
+		</div>
+			<div>
+			<div>
+				<label>
+				<input type="radio" name="status" value ="incomplete" <%= "checked" if @status == "incomplete" %> >
+				Incomplete
+				</label>
+			</div>
+
+			<div>
+				<label>
+					<input type="radio" name="status" value="complete" <%= "checked" if @status == "complete" %> >
+					Complete
+				</label>
+			</div>
+		</div>
+		<input type="hidden" name="task_id" value="<%= params[:task_id] %>">
+		<input type="submit">
+</form>
+
