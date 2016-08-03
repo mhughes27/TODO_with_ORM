@@ -56,18 +56,38 @@ class Task
     records = DB.execute("DELETE FROM tasks WHERE task_id = #{task_id}")
   end
 
+  # Filter a task by status.
+  # 
+  # status - complete or incomplete
+  # 
+  # Returns the Task objects for the records that meet the criteria.
+  def Task.filter1(status)
+    filtered_objects = Array.new
+    filtered_hashes = DB.execute("SELECT * FROM tasks WHERE status = '#{status}'")
+    
+    filtered_hashes.each do |x|
+      filtered_objects << Task.new(x["task_id"], x["name"], x["description"], x["status"])
+    end
+
+    return filtered_objects
+  end
+
 
   # Filter a task by name and status.
   # 
   # name - family_member's name, status - complete or incomplete
   # 
-  # Returns the Task objects for the records that met the criteria.
-  # def Task.filter(name, status)
-  #   records = DB.execute(SELECT * FROM tasks WHERE name='#{name}' and status = '#{status}')
-  #   record = records[0]
+  # Returns the Task objects for the records that meet the criteria.
+  def Task.filter2(name, status)
+    filtered_objects = Array.new
+    filtered_hashes = DB.execute("SELECT * FROM tasks WHERE name = '#{name}' and status = '#{status}'")
+    
+    filtered_hashes.each do |x|
+      filtered_objects << Task.new(x["task_id"], x["name"], x["description"], x["status"])
+    end
 
-  #   Task.new(record["task_id"], record["name"], record["description"], record["status"])
-  # end
+    return filtered_objects
+  end
 
 
 # class end

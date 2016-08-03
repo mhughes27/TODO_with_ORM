@@ -46,18 +46,36 @@ class TodoTest < Minitest::Test
 	    
 	end
 
-	# def test_filter
-	# 	DB.execute("INSERT INTO tasks (name, description, status) VALUES (\"Mary\", \"Paint.\", \"complete\")")
-	# 	DB.execute("INSERT INTO tasks (name, description, status) VALUES (\"Bob\", \"Clean.\", \"complete\")")
-	# 	DB.execute("INSERT INTO tasks (name, description, status) VALUES (\"Mary\", \"Sweep.\", \"complete\")")
-	# 	DB.execute("INSERT INTO tasks (name, description, status) VALUES (\"Mary\", \"Vacuum.\", \"incomplete\")")
-	# 	DB.execute("INSERT INTO tasks (name, description, status) VALUES (\"Lisa\", \"Dust.\", \"incomplete\")")
-	# 	DB.execute("INSERT INTO tasks (name, description, status) VALUES (\"Joe\", \"Walk.\", \"incomplete\")")
+	def test_filter1
+		DB.execute("INSERT INTO tasks (name, description, status) VALUES (\"Mary\", \"Paint.\", \"complete\")")
+		DB.execute("INSERT INTO tasks (name, description, status) VALUES (\"Bob\", \"Clean.\", \"complete\")")
+		DB.execute("INSERT INTO tasks (name, description, status) VALUES (\"Mary\", \"Sweep.\", \"complete\")")
+		DB.execute("INSERT INTO tasks (name, description, status) VALUES (\"Mary\", \"Vacuum.\", \"incomplete\")")
+		DB.execute("INSERT INTO tasks (name, description, status) VALUES (\"Lisa\", \"Dust.\", \"incomplete\")")
+		DB.execute("INSERT INTO tasks (name, description, status) VALUES (\"Joe\", \"Walk.\", \"incomplete\")")
+
+		filtered = Task.filter1("complete")
+
+		refute_nil(filtered)
+		assert_kind_of Array, filtered
+	     
+	end
 
 
-	# end
+	def test_filter2
+		DB.execute("INSERT INTO tasks (name, description, status) VALUES (\"Mary\", \"Paint.\", \"complete\")")
+		DB.execute("INSERT INTO tasks (name, description, status) VALUES (\"Bob\", \"Clean.\", \"complete\")")
+		DB.execute("INSERT INTO tasks (name, description, status) VALUES (\"Mary\", \"Sweep.\", \"complete\")")
+		DB.execute("INSERT INTO tasks (name, description, status) VALUES (\"Mary\", \"Vacuum.\", \"incomplete\")")
+		DB.execute("INSERT INTO tasks (name, description, status) VALUES (\"Lisa\", \"Dust.\", \"incomplete\")")
+		DB.execute("INSERT INTO tasks (name, description, status) VALUES (\"Joe\", \"Walk.\", \"incomplete\")")
 
+		filtered = Task.filter2("Mary", "complete")
 
+		refute_nil(filtered)
+		assert_kind_of Array, filtered
+	   
+	end
 
 
 # this is the end for the class
