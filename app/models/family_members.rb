@@ -8,8 +8,8 @@ require "pry"
 # models, so it's to be expected.
 
 class User
-  attr_reader :name, :family_id
-  attr_writer :name
+  attr_reader :family_id, :name, :email
+  attr_writer :family_id, :name, :email
 
   def initialize(name, family_id=nil)
     @name = name

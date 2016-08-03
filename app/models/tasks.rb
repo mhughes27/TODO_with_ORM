@@ -51,13 +51,11 @@ class Task
   # attributes_hash - Hash containing some keys/values for this record.
   # 
   # Returns the User object, after it's been modified.
-  def update_attributes(task_id, name, description, status)
-    DB.execute("UDATE tasks SET name=\"#{{name}\", description=\"#{description}\", status=\"#{status}\" WHERE id=#{task_id}")
+  def Task.update_attributes(task_id, name, description, status)
+    records = DB.execute("UPDATE tasks SET name='#{name}', description='#{description}', status='#{status}' WHERE task_id=#{task_id}")
+    record = records[0]
 
-    @name = name
-    @description = description
-    @status = status
-    return self
+    Task.new(record["task_id"], record["name"], record["description"], record["status"])
   end
 
 
