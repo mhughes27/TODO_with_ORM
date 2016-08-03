@@ -11,7 +11,7 @@ class Task
   attr_reader :task_id, :name, :description, :status
   attr_writer :task_id, :name, :description, :status
 
-  def initialize(task_id=nil, name, description, status)
+  def initialize(task_id, name, description, status)
     @task_id = task_id
     @name = name
     @description = description
@@ -25,18 +25,6 @@ class Task
   # Returns a Task object with all of the corresponding record's details.
   def Task.find(task_id)
     records = DB.execute("SELECT * FROM tasks WHERE task_id = #{task_id}")
-    record = records[0]
-
-    Task.new(record["task_id"], record["name"], record["description"], record["status"])
-  end
-
-  # Delete a task.
-  # 
-  # id - Integer of task's ID.
-  # 
-  # Returns the Task object for the record that was just deleted.
-  def Task.delete(task_id)
-    records = DB.execute("DELETE FROM tasks WHERE task_id = #{task_id}")
     record = records[0]
 
     Task.new(record["task_id"], record["name"], record["description"], record["status"])
@@ -58,6 +46,17 @@ class Task
     Task.new(record["task_id"], record["name"], record["description"], record["status"])
   end
 
+# Delete a task.
+  # 
+  # id - Integer of task's ID.
+  # 
+  # Returns the Task object for the record that was just deleted.
+  def Task.delete(task_id)
+    records = DB.execute("DELETE FROM tasks WHERE task_id = #{task_id}")
+    record = records[0]
+
+    Task.new(record["task_id"], record["name"], record["description"], record["status"])
+  end
 
 
 # class end
