@@ -14,14 +14,14 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-08-03T13:07:12-05:00">2016-08-03T13:07:12-05:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-08-03T13:26:19-05:00">2016-08-03T13:26:19-05:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">50.98%</span></span>
+    (<span class="covered_percent"><span class="red">51.46%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
@@ -32,8 +32,8 @@
   <a name="AllFiles"></a>
   <div>
     <b>5</b> files in total.
-    <b>102</b> relevant lines. 
-    <span class="green"><b>52</b> lines covered</span> and
+    <b>103</b> relevant lines. 
+    <span class="green"><b>53</b> lines covered</span> and
     <span class="red"><b>50</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -92,10 +92,10 @@
       
       <tr>
         <td class="strong"><a href="#5f028e690ce28678edeacaf9789c1d3602a712a4" class="src_link" title="app/models/tasks.rb">app/models/tasks.rb</a></td>
-        <td class="yellow strong">85.71 %</td>
-        <td>63</td>
-        <td>21</td>
-        <td>18</td>
+        <td class="yellow strong">86.36 %</td>
+        <td>64</td>
+        <td>22</td>
+        <td>19</td>
         <td>3</td>
         <td>0.9</td>
       </tr>
@@ -1619,10 +1619,10 @@
         <div class="source_table" id="5f028e690ce28678edeacaf9789c1d3602a712a4">
   <div class="header">
     <h3>app/models/tasks.rb</h3>
-    <h4><span class="yellow">85.71 %</span> covered</h4>
+    <h4><span class="yellow">86.36 %</span> covered</h4>
     <div>
-      <b>21</b> relevant lines. 
-      <span class="green"><b>18</b> lines covered</span> and
+      <b>22</b> relevant lines. 
+      <span class="green"><b>19</b> lines covered</span> and
       <span class="red"><b>3</b> lines missed.</span>
     </div>
   </div>
@@ -1957,37 +1957,37 @@
         <li class="covered" data-hits="1" data-linenumber="55">
           <span class="hits">1</span>
           
-          <code class="ruby">    bananas = DB.execute(&quot;DELETE FROM tasks WHERE task_id = #{task_id}&quot;)</code>
+          <code class="ruby">    records = DB.execute(&quot;DELETE FROM tasks WHERE task_id = #{task_id}&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="56">
           <span class="hits">1</span>
           
-          <code class="ruby">    banana = bananas[0]</code>
+          <code class="ruby">    record = records[0]</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="57">
+        <li class="covered" data-hits="1" data-linenumber="57">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    binding.pry</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="58">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="58">
+        <li class="covered" data-hits="1" data-linenumber="59">
           <span class="hits">1</span>
           
-          <code class="ruby">    Task.new(banana[&quot;task_id&quot;], banana[&quot;name&quot;], banana[&quot;description&quot;], banana[&quot;status&quot;])</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="59">
-          
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    Task.new(record[&quot;task_id&quot;], record[&quot;name&quot;], record[&quot;description&quot;], record[&quot;status&quot;])</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="60">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="61">
@@ -1999,10 +1999,16 @@
         <li class="never" data-hits="" data-linenumber="62">
           
           
-          <code class="ruby"># class end</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="63">
+          
+          
+          <code class="ruby"># class end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="64">
           
           
           <code class="ruby">end</code>
