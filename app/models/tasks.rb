@@ -40,23 +40,34 @@ class Task
   # 
   # Returns the User object, after it's been modified.
   def Task.update_attributes(task_id, name, description, status)
-    records = DB.execute("UPDATE tasks SET name='#{name}', description='#{description}', status='#{status}' WHERE task_id=#{task_id}")
+    update = DB.execute("UPDATE tasks SET name='#{name}', description='#{description}', status='#{status}' WHERE task_id=#{task_id}")
+    records = DB.execute("SELECT * FROM tasks WHERE task_id = #{task_id}")
     record = records[0]
 
     Task.new(record["task_id"], record["name"], record["description"], record["status"])
   end
 
-# Delete a task.
+  # Delete a task.
   # 
   # id - Integer of task's ID.
   # 
-  # Returns the Task object for the record that was just deleted.
+  # Nothing is returned from the database.
   def Task.delete(task_id)
     records = DB.execute("DELETE FROM tasks WHERE task_id = #{task_id}")
-    record = records[0]
-
-    Task.new(record["task_id"], record["name"], record["description"], record["status"])
   end
+
+
+  # Filter a task by name and status.
+  # 
+  # name - family_member's name, status - complete or incomplete
+  # 
+  # Returns the Task objects for the records that met the criteria.
+  # def Task.filter(name, status)
+  #   records = DB.execute(SELECT * FROM tasks WHERE name='#{name}' and status = '#{status}')
+  #   record = records[0]
+
+  #   Task.new(record["task_id"], record["name"], record["description"], record["status"])
+  # end
 
 
 # class end
