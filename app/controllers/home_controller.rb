@@ -1,12 +1,9 @@
 MyApp.get "/" do
 
+	@incomplete = Task.filter1("incomplete")
+	@complete = Task.filter1("complete")
 
-
-@incomplete = Task.filter1("incomplete")
-@complete = Task.filter1("complete")
-
-erb :"home"
-
+	erb :"home"
 end
 
 
@@ -33,7 +30,7 @@ MyApp.get "/filtered" do
 end
 
 MyApp.post '/delete' do
-   @delete = Tasks.new.delete_task(params[:task_id])
+   @delete = Task.delete(params[:task_id])
    redirect '/'
  end
 
