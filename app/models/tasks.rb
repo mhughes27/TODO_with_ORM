@@ -75,12 +75,12 @@ class Task
   # 
   # Returns the Task objects for the records that meet the criteria.
   def Task.filter1(status)
-    filtered_objects = Array.new
-    filtered_hashes = DB.execute("SELECT * FROM tasks WHERE status = '#{status}'")
+      filtered_objects = Array.new
+      filtered_hashes = DB.execute("SELECT * FROM tasks WHERE status = '#{status}'")
     
-    filtered_hashes.each do |x|
-      filtered_objects << Task.new(x["task_id"], x["name"], x["description"], x["status"])
-    end
+      filtered_hashes.each do |x|
+        filtered_objects << Task.new(x["task_id"], x["name"], x["description"], x["status"])
+      end
 
     return filtered_objects
   end
