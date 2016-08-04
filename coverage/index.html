@@ -5,7 +5,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <script src='./assets/0.10.0/application.js' type='text/javascript'></script>    
     <link href='./assets/0.10.0/application.css' media='screen, projection, print' rel='stylesheet' type='text/css'>
-    <link rel="shortcut icon" type="image/png" href="./assets/0.10.0/favicon_red.png" />
+    <link rel="shortcut icon" type="image/png" href="./assets/0.10.0/favicon_yellow.png" />
     <link rel="icon" type="image/png" href="./assets/0.10.0/favicon.png" />
   </head>
   
@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-08-04T10:38:57-05:00">2016-08-04T10:38:57-05:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-08-04T11:46:46-05:00">2016-08-04T11:46:46-05:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">78.16%</span></span>
+    (<span class="covered_percent"><span class="yellow">81.41%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.07
+         1.14
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>6</b> files in total.
-    <b>174</b> relevant lines. 
-    <span class="green"><b>136</b> lines covered</span> and
-    <span class="red"><b>38</b> lines missed </span>
+    <b>156</b> relevant lines. 
+    <span class="green"><b>127</b> lines covered</span> and
+    <span class="red"><b>29</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -53,7 +53,7 @@
       <tr>
         <td class="strong"><a href="#64d6b81ec552929a90615608ef0183e33ad64c36" class="src_link" title="app/controllers/home_controller.rb">app/controllers/home_controller.rb</a></td>
         <td class="red strong">26.92 %</td>
-        <td>56</td>
+        <td>52</td>
         <td>26</td>
         <td>7</td>
         <td>19</td>
@@ -82,20 +82,20 @@
       
       <tr>
         <td class="strong"><a href="#7f27b39059fefe30e67a79ddcc677f0975a35cb5" class="src_link" title="app/models/oldtasks.rb">app/models/oldtasks.rb</a></td>
-        <td class="red strong">52.63 %</td>
+        <td class="green strong">100.0 %</td>
         <td>42</td>
-        <td>19</td>
-        <td>10</td>
-        <td>9</td>
-        <td>0.5</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0.0</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#5f028e690ce28678edeacaf9789c1d3602a712a4" class="src_link" title="app/models/tasks.rb">app/models/tasks.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>107</td>
-        <td>37</td>
-        <td>37</td>
+        <td>108</td>
+        <td>38</td>
+        <td>38</td>
         <td>0</td>
         <td>1.8</td>
       </tr>
@@ -152,34 +152,34 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="3">
+        <li class="missed" data-hits="0" data-linenumber="3">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">	@incomplete = Task.filter1(&quot;incomplete&quot;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="4">
+        <li class="missed" data-hits="0" data-linenumber="4">
           
           
-          <code class="ruby"># basic functions</code>
+          <code class="ruby">	@complete = Task.filter1(&quot;complete&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="5">
           
           
-          <code class="ruby"># @tasks = Tasks.new.all_tasks</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="6">
           
           
-          <code class="ruby">@incomplete = Task.new.filter1( @task_id, @name, @description, &quot;incomplete&quot;)</code>
+          <code class="ruby">	erb :&quot;home&quot;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="7">
+        <li class="never" data-hits="" data-linenumber="7">
           
           
-          <code class="ruby">@complete = Task.new.filter1( @task_id, @name, @description, &quot;complete&quot;)</code>
+          <code class="ruby">end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="8">
@@ -188,28 +188,28 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="9">
-          
-          
-          <code class="ruby">erb :&quot;home&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="10">
+        <li class="never" data-hits="" data-linenumber="9">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="11">
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
+          
+          <code class="ruby">MyApp.get &quot;/new&quot; do</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="11">
           
           
-          <code class="ruby">end</code>
+          <code class="ruby">	erb :&quot;new&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="12">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="13">
@@ -221,256 +221,232 @@
         <li class="covered" data-hits="1" data-linenumber="14">
           <span class="hits">1</span>
           
-          <code class="ruby">MyApp.get &quot;/new&quot; do</code>
+          <code class="ruby">MyApp.post &quot;/new/process&quot; do</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="15">
+        <li class="never" data-hits="" data-linenumber="15">
           
           
-          <code class="ruby">	erb :&quot;new&quot;</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="16">
           
           
-          <code class="ruby">end</code>
+          <code class="ruby">	# @rightEmail = Task.sortByName(params[:person], &quot;Bob&quot;, &quot;Mary&quot;, &quot;Joe&quot;, &quot;Lisa&quot;, &quot;michaeljducey@gmail.com&quot;, &quot;michaeljducey@gmail.com&quot;, &quot;mhughes27@gmail.com&quot;, &quot;mhughes27@gmail.com&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="17">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">	# sendEmail = Task.sendTaskReminder(@rightEmail, params[:person], params[:task])</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="18">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="18">
           
-          <code class="ruby">MyApp.post &quot;/new/process&quot; do</code>
+          
+          <code class="ruby">	@newtask = Task.save(params[:person], params[:task], params[:status])</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="19">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">	</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="20">
+        <li class="missed" data-hits="0" data-linenumber="20">
           
           
-          <code class="ruby">	# @rightEmail = Task.sortByName(params[:person], &quot;Bob&quot;, &quot;Mary&quot;, &quot;Joe&quot;, &quot;Lisa&quot;, &quot;michaeljducey@gmail.com&quot;, &quot;michaeljducey@gmail.com&quot;, &quot;mhughes27@gmail.com&quot;, &quot;mhughes27@gmail.com&quot;)</code>
+          <code class="ruby">	redirect &#39;/&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="21">
           
           
-          <code class="ruby">	# sendEmail = Task.sendTaskReminder(@rightEmail, params[:person], params[:task])</code>
+          <code class="ruby">end</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="22">
+        <li class="never" data-hits="" data-linenumber="22">
           
           
-          <code class="ruby">	@newtask = Tasks.new.create_task(params[:person], params[:task], params[:status])</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="23">
           
           
-          <code class="ruby">	</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="24">
-          
-          
-          <code class="ruby">	redirect &#39;/&#39;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="25">
-          
-          
-          <code class="ruby">end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="26">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="27">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="28">
+        <li class="covered" data-hits="1" data-linenumber="24">
           <span class="hits">1</span>
           
           <code class="ruby">MyApp.get &quot;/filtered&quot; do</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="29">
+        <li class="missed" data-hits="0" data-linenumber="25">
           
           
           <code class="ruby">	@member = params[:user]</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="30">
+        <li class="missed" data-hits="0" data-linenumber="26">
           
           
-          <code class="ruby">	@filtered_todo = Tasks.new.filtered_todo(params[:user])</code>
+          <code class="ruby">	@filtered_todo = Task.filter2(params[:user], &quot;incomplete&quot;)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="31">
+        <li class="missed" data-hits="0" data-linenumber="27">
           
           
-          <code class="ruby">	@filtered_done = Tasks.new. filtered_done(params[:user])</code>
+          <code class="ruby">	@filtered_done = Task.filter2(params[:user], &quot;complete&quot;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="32">
+        <li class="never" data-hits="" data-linenumber="28">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="33">
+        <li class="missed" data-hits="0" data-linenumber="29">
           
           
           <code class="ruby">	erb :&quot;filtered&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="34">
+        <li class="never" data-hits="" data-linenumber="30">
           
           
           <code class="ruby">end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="35">
+        <li class="never" data-hits="" data-linenumber="31">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="36">
+        <li class="covered" data-hits="1" data-linenumber="32">
           <span class="hits">1</span>
           
           <code class="ruby">MyApp.post &#39;/delete&#39; do</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="37">
+        <li class="missed" data-hits="0" data-linenumber="33">
           
           
-          <code class="ruby">   @delete = Tasks.new.delete_task(params[:task_id])</code>
+          <code class="ruby">   @delete = Task.delete(params[:task_id])</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="38">
+        <li class="missed" data-hits="0" data-linenumber="34">
           
           
           <code class="ruby">   redirect &#39;/&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="39">
+        <li class="never" data-hits="" data-linenumber="35">
           
           
           <code class="ruby"> end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="40">
+        <li class="never" data-hits="" data-linenumber="36">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="41">
+        <li class="covered" data-hits="1" data-linenumber="37">
           <span class="hits">1</span>
           
           <code class="ruby">MyApp.post &quot;/edit&quot; do</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="42">
+        <li class="missed" data-hits="0" data-linenumber="38">
           
           
           <code class="ruby">	@description = params[:description]</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="43">
+        <li class="missed" data-hits="0" data-linenumber="39">
           
           
           <code class="ruby">	@name = params[:name]</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="44">
+        <li class="missed" data-hits="0" data-linenumber="40">
           
           
           <code class="ruby">	@status = params[:status]</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="45">
+        <li class="never" data-hits="" data-linenumber="41">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="46">
+        <li class="never" data-hits="" data-linenumber="42">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="47">
+        <li class="missed" data-hits="0" data-linenumber="43">
           
           
           <code class="ruby">	@task_to_edit = Tasks.new.task_to_edit(params[:task_id])</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="48">
+        <li class="never" data-hits="" data-linenumber="44">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="49">
+        <li class="missed" data-hits="0" data-linenumber="45">
           
           
           <code class="ruby">	erb :&quot;edit&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="50">
+        <li class="never" data-hits="" data-linenumber="46">
           
           
           <code class="ruby">end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="51">
+        <li class="never" data-hits="" data-linenumber="47">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="52">
+        <li class="covered" data-hits="1" data-linenumber="48">
           <span class="hits">1</span>
           
           <code class="ruby">MyApp.post &quot;/edit/process&quot; do</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="53">
+        <li class="missed" data-hits="0" data-linenumber="49">
           
           
           <code class="ruby">	@edited_task = Tasks.new.edit_task(params[:task_id], params[:name], params[:description], params[:status])</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="54">
+        <li class="missed" data-hits="0" data-linenumber="50">
           
           
           <code class="ruby">	redirect &#39;/&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="55">
+        <li class="never" data-hits="" data-linenumber="51">
           
           
           <code class="ruby">end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="56">
+        <li class="never" data-hits="" data-linenumber="52">
           
           
           <code class="ruby"></code>
@@ -1383,39 +1359,39 @@
         <div class="source_table" id="7f27b39059fefe30e67a79ddcc677f0975a35cb5">
   <div class="header">
     <h3>app/models/oldtasks.rb</h3>
-    <h4><span class="red">52.63 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>19</b> relevant lines. 
-      <span class="green"><b>10</b> lines covered</span> and
-      <span class="red"><b>9</b> lines missed.</span>
+      <b>0</b> relevant lines. 
+      <span class="green"><b>0</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
   <pre>
     <ol>
       
-        <li class="covered" data-hits="1" data-linenumber="1">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="1">
           
-          <code class="ruby">class Tasks</code>
+          
+          <code class="ruby"># class Tasks</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="2">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="2">
           
-          <code class="ruby">	def all_tasks</code>
+          
+          <code class="ruby"># 	def all_tasks</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="3">
+        <li class="never" data-hits="" data-linenumber="3">
           
           
-          <code class="ruby">		DB.execute(&quot;SELECT * FROM tasks;&quot;)</code>
+          <code class="ruby"># 		DB.execute(&quot;SELECT * FROM tasks;&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="4">
           
           
-          <code class="ruby">	end</code>
+          <code class="ruby"># 	end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="5">
@@ -1424,22 +1400,22 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="6">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="6">
           
-          <code class="ruby">	def completed_tasks</code>
+          
+          <code class="ruby"># 	def completed_tasks</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="7">
+        <li class="never" data-hits="" data-linenumber="7">
           
           
-          <code class="ruby">		DB.execute(&quot;SELECT * FROM tasks WHERE status=\&quot;complete\&quot;;&quot;)</code>
+          <code class="ruby"># 		DB.execute(&quot;SELECT * FROM tasks WHERE status=\&quot;complete\&quot;;&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="8">
           
           
-          <code class="ruby">	end</code>
+          <code class="ruby"># 	end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="9">
@@ -1448,22 +1424,22 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="10">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="10">
           
-          <code class="ruby">	def incomplete_tasks</code>
+          
+          <code class="ruby"># 	def incomplete_tasks</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="11">
+        <li class="never" data-hits="" data-linenumber="11">
           
           
-          <code class="ruby">		DB.execute(&quot;SELECT * FROM tasks WHERE status=\&quot;incomplete\&quot;;&quot;)</code>
+          <code class="ruby"># 		DB.execute(&quot;SELECT * FROM tasks WHERE status=\&quot;incomplete\&quot;;&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="12">
           
           
-          <code class="ruby">	end</code>
+          <code class="ruby"># 	end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="13">
@@ -1472,22 +1448,22 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="14">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="14">
           
-          <code class="ruby">	def create_task(name, task, status)</code>
+          
+          <code class="ruby"># 	def create_task(name, task, status)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="15">
+        <li class="never" data-hits="" data-linenumber="15">
           
           
-          <code class="ruby">		DB.execute(&quot;INSERT INTO tasks (name, description, status) VALUES (\&quot;#{name}\&quot;, \&quot;#{task}\&quot;, \&quot;#{status}\&quot;);&quot;)</code>
+          <code class="ruby"># 		DB.execute(&quot;INSERT INTO tasks (name, description, status) VALUES (\&quot;#{name}\&quot;, \&quot;#{task}\&quot;, \&quot;#{status}\&quot;);&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="16">
           
           
-          <code class="ruby">	end</code>
+          <code class="ruby"># 	end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="17">
@@ -1496,22 +1472,22 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="18">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="18">
           
-          <code class="ruby">	def filtered_todo(name)</code>
+          
+          <code class="ruby"># 	def filtered_todo(name)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="19">
+        <li class="never" data-hits="" data-linenumber="19">
           
           
-          <code class="ruby">		DB.execute(&quot;SELECT * FROM tasks WHERE name=\&quot;#{name}\&quot; and status=\&quot;incomplete\&quot;;&quot;)</code>
+          <code class="ruby"># 		DB.execute(&quot;SELECT * FROM tasks WHERE name=\&quot;#{name}\&quot; and status=\&quot;incomplete\&quot;;&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="20">
           
           
-          <code class="ruby">	end</code>
+          <code class="ruby"># 	end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="21">
@@ -1520,22 +1496,22 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="22">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="22">
           
-          <code class="ruby">	def filtered_done(name) </code>
+          
+          <code class="ruby"># 	def filtered_done(name) </code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="23">
+        <li class="never" data-hits="" data-linenumber="23">
           
           
-          <code class="ruby">		DB.execute(&quot;SELECT * FROM tasks WHERE name=\&quot;#{name}\&quot; and status=\&quot;complete\&quot;;&quot;)</code>
+          <code class="ruby"># 		DB.execute(&quot;SELECT * FROM tasks WHERE name=\&quot;#{name}\&quot; and status=\&quot;complete\&quot;;&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="24">
           
           
-          <code class="ruby">	end</code>
+          <code class="ruby"># 	end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="25">
@@ -1544,22 +1520,22 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="26">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="26">
           
-          <code class="ruby">	def delete_task(task_id)</code>
+          
+          <code class="ruby"># 	def delete_task(task_id)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="27">
+        <li class="never" data-hits="" data-linenumber="27">
           
           
-          <code class="ruby">		DB.execute(&quot;DELETE FROM tasks WHERE task_id=#{task_id};&quot;)</code>
+          <code class="ruby"># 		DB.execute(&quot;DELETE FROM tasks WHERE task_id=#{task_id};&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="28">
           
           
-          <code class="ruby">	end</code>
+          <code class="ruby"># 	end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="29">
@@ -1568,22 +1544,22 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="30">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="30">
           
-          <code class="ruby">	def task_to_edit(task_id)</code>
+          
+          <code class="ruby"># 	def task_to_edit(task_id)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="31">
+        <li class="never" data-hits="" data-linenumber="31">
           
           
-          <code class="ruby">		DB.execute(&quot;SELECT * FROM tasks WHERE task_id=#{task_id};&quot;)</code>
+          <code class="ruby"># 		DB.execute(&quot;SELECT * FROM tasks WHERE task_id=#{task_id};&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="32">
           
           
-          <code class="ruby">	end</code>
+          <code class="ruby"># 	end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="33">
@@ -1592,22 +1568,22 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="34">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="34">
           
-          <code class="ruby">	def edit_task(task_id, name, description, status)</code>
+          
+          <code class="ruby"># 	def edit_task(task_id, name, description, status)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="35">
+        <li class="never" data-hits="" data-linenumber="35">
           
           
-          <code class="ruby">		DB.execute(&quot;UPDATE tasks SET name=\&quot;#{name}\&quot;, description=\&quot;#{description}\&quot;, status=\&quot;#{status}\&quot; WHERE task_id=#{task_id};&quot;)</code>
+          <code class="ruby"># 		DB.execute(&quot;UPDATE tasks SET name=\&quot;#{name}\&quot;, description=\&quot;#{description}\&quot;, status=\&quot;#{status}\&quot; WHERE task_id=#{task_id};&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="36">
           
           
-          <code class="ruby">	end</code>
+          <code class="ruby"># 	end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="37">
@@ -1637,13 +1613,13 @@
         <li class="never" data-hits="" data-linenumber="41">
           
           
-          <code class="ruby"># the class end</code>
+          <code class="ruby"># # the class end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="42">
           
           
-          <code class="ruby">end</code>
+          <code class="ruby"># end</code>
         </li>
       
     </ol>
@@ -1655,8 +1631,8 @@
     <h3>app/models/tasks.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>37</b> relevant lines. 
-      <span class="green"><b>37</b> lines covered</span> and
+      <b>38</b> relevant lines. 
+      <span class="green"><b>38</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -1985,7 +1961,7 @@
         <li class="covered" data-hits="1" data-linenumber="54">
           <span class="hits">1</span>
           
-          <code class="ruby">  def Task.save(task_id, name, description, status)</code>
+          <code class="ruby">  def Task.save(name, description, status)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="55">
@@ -1997,37 +1973,37 @@
         <li class="covered" data-hits="1" data-linenumber="56">
           <span class="hits">1</span>
           
-          <code class="ruby">    records = DB.execute(&quot;SELECT * FROM tasks WHERE task_id = #{task_id}&quot;)</code>
+          <code class="ruby">    last_id = DB.last_insert_row_id</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="57">
           <span class="hits">1</span>
           
+          <code class="ruby">    records = DB.execute(&quot;SELECT * FROM tasks WHERE task_id = #{last_id}&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="58">
+          <span class="hits">1</span>
+          
           <code class="ruby">    record = records[0]</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="58">
+        <li class="never" data-hits="" data-linenumber="59">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="59">
+        <li class="covered" data-hits="1" data-linenumber="60">
           <span class="hits">1</span>
           
           <code class="ruby">    Task.new(record[&quot;task_id&quot;], record[&quot;name&quot;], record[&quot;description&quot;], record[&quot;status&quot;])</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="60">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
         <li class="never" data-hits="" data-linenumber="61">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="62">
@@ -2039,151 +2015,151 @@
         <li class="never" data-hits="" data-linenumber="63">
           
           
-          <code class="ruby">  # Delete a task.</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="64">
           
           
-          <code class="ruby">  # </code>
+          <code class="ruby">  # Delete a task.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="65">
           
           
-          <code class="ruby">  # id - Integer of task&#39;s ID.</code>
+          <code class="ruby">  # </code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="66">
           
           
-          <code class="ruby">  # </code>
+          <code class="ruby">  # id - Integer of task&#39;s ID.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="67">
           
           
-          <code class="ruby">  # Nothing is returned from the database.</code>
+          <code class="ruby">  # </code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="68">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="68">
           
-          <code class="ruby">  def Task.delete(task_id)</code>
+          
+          <code class="ruby">  # Nothing is returned from the database.</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="69">
           <span class="hits">1</span>
           
-          <code class="ruby">    records = DB.execute(&quot;DELETE FROM tasks WHERE task_id = #{task_id}&quot;)</code>
+          <code class="ruby">  def Task.delete(task_id)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="70">
+        <li class="covered" data-hits="1" data-linenumber="70">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    records = DB.execute(&quot;DELETE FROM tasks WHERE task_id = #{task_id}&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="71">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="72">
           
           
-          <code class="ruby">  # Filter a task by status.</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="73">
           
           
-          <code class="ruby">  # </code>
+          <code class="ruby">  # Filter a task by status.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="74">
           
           
-          <code class="ruby">  # status - complete or incomplete</code>
+          <code class="ruby">  # </code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="75">
           
           
-          <code class="ruby">  # </code>
+          <code class="ruby">  # status - complete or incomplete</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="76">
           
           
-          <code class="ruby">  # Returns the Task objects for the records that meet the criteria.</code>
+          <code class="ruby">  # </code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="77">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="77">
           
-          <code class="ruby">  def Task.filter1(status)</code>
+          
+          <code class="ruby">  # Returns the Task objects for the records that meet the criteria.</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="78">
           <span class="hits">1</span>
           
-          <code class="ruby">      filtered_objects = Array.new</code>
+          <code class="ruby">  def Task.filter1(status)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="79">
           <span class="hits">1</span>
           
+          <code class="ruby">      filtered_objects = Array.new</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="80">
+          <span class="hits">1</span>
+          
           <code class="ruby">      filtered_hashes = DB.execute(&quot;SELECT * FROM tasks WHERE status = &#39;#{status}&#39;&quot;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="80">
+        <li class="never" data-hits="" data-linenumber="81">
           
           
           <code class="ruby">    </code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="81">
+        <li class="covered" data-hits="1" data-linenumber="82">
           <span class="hits">1</span>
           
           <code class="ruby">      filtered_hashes.each do |x|</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="82">
+        <li class="covered" data-hits="3" data-linenumber="83">
           <span class="hits">3</span>
           
           <code class="ruby">        filtered_objects &lt;&lt; Task.new(x[&quot;task_id&quot;], x[&quot;name&quot;], x[&quot;description&quot;], x[&quot;status&quot;])</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="83">
+        <li class="never" data-hits="" data-linenumber="84">
           
           
           <code class="ruby">      end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="84">
+        <li class="never" data-hits="" data-linenumber="85">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="85">
+        <li class="covered" data-hits="1" data-linenumber="86">
           <span class="hits">1</span>
           
           <code class="ruby">    return filtered_objects</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="86">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
         <li class="never" data-hits="" data-linenumber="87">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="88">
@@ -2195,97 +2171,97 @@
         <li class="never" data-hits="" data-linenumber="89">
           
           
-          <code class="ruby">  # Filter a task by name and status.</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="90">
           
           
-          <code class="ruby">  # </code>
+          <code class="ruby">  # Filter a task by name and status.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="91">
           
           
-          <code class="ruby">  # name - family_member&#39;s name, status - complete or incomplete</code>
+          <code class="ruby">  # </code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="92">
           
           
-          <code class="ruby">  # </code>
+          <code class="ruby">  # name - family_member&#39;s name, status - complete or incomplete</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="93">
           
           
-          <code class="ruby">  # Returns the Task objects for the records that meet the criteria.</code>
+          <code class="ruby">  # </code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="94">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="94">
           
-          <code class="ruby">  def Task.filter2(name, status)</code>
+          
+          <code class="ruby">  # Returns the Task objects for the records that meet the criteria.</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="95">
           <span class="hits">1</span>
           
-          <code class="ruby">    filtered_objects = Array.new</code>
+          <code class="ruby">  def Task.filter2(name, status)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="96">
           <span class="hits">1</span>
           
+          <code class="ruby">    filtered_objects = Array.new</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="97">
+          <span class="hits">1</span>
+          
           <code class="ruby">    filtered_hashes = DB.execute(&quot;SELECT * FROM tasks WHERE name = &#39;#{name}&#39; and status = &#39;#{status}&#39;&quot;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="97">
+        <li class="never" data-hits="" data-linenumber="98">
           
           
           <code class="ruby">    </code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="98">
+        <li class="covered" data-hits="1" data-linenumber="99">
           <span class="hits">1</span>
           
           <code class="ruby">    filtered_hashes.each do |x|</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="99">
+        <li class="covered" data-hits="2" data-linenumber="100">
           <span class="hits">2</span>
           
           <code class="ruby">      filtered_objects &lt;&lt; Task.new(x[&quot;task_id&quot;], x[&quot;name&quot;], x[&quot;description&quot;], x[&quot;status&quot;])</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="100">
+        <li class="never" data-hits="" data-linenumber="101">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="101">
+        <li class="never" data-hits="" data-linenumber="102">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="102">
+        <li class="covered" data-hits="1" data-linenumber="103">
           <span class="hits">1</span>
           
           <code class="ruby">    return filtered_objects</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="103">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
         <li class="never" data-hits="" data-linenumber="104">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="105">
@@ -2297,10 +2273,16 @@
         <li class="never" data-hits="" data-linenumber="106">
           
           
-          <code class="ruby"># class end</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="107">
+          
+          
+          <code class="ruby"># class end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="108">
           
           
           <code class="ruby">end</code>
@@ -2567,7 +2549,7 @@
         <li class="covered" data-hits="1" data-linenumber="41">
           <span class="hits">1</span>
           
-          <code class="ruby">		saved = Task.save(2, &quot;Mary&quot;, &quot;Unload the diswasher&quot;, &quot;incomplete&quot;)</code>
+          <code class="ruby">		saved = Task.save(&quot;Mary&quot;, &quot;Unload the diswasher&quot;, &quot;incomplete&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="42">

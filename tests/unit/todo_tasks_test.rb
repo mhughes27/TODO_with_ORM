@@ -38,7 +38,7 @@ class TodoTest < Minitest::Test
 
 	def test_save
 
-		saved = Task.save(2, "Mary", "Unload the diswasher", "incomplete")
+		saved = Task.save("Mary", "Unload the diswasher", "incomplete")
 
 		refute_nil(saved)
 	    assert_equal("Mary", saved.name)

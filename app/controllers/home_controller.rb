@@ -15,7 +15,7 @@ MyApp.post "/new/process" do
 
 	# @rightEmail = Task.sortByName(params[:person], "Bob", "Mary", "Joe", "Lisa", "michaeljducey@gmail.com", "michaeljducey@gmail.com", "mhughes27@gmail.com", "mhughes27@gmail.com")
 	# sendEmail = Task.sendTaskReminder(@rightEmail, params[:person], params[:task])
-	@newtask = Tasks.new.create_task(params[:person], params[:task], params[:status])
+	@newtask = Task.save(params[:person], params[:task], params[:status])
 	
 	redirect '/'
 end
