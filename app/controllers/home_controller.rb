@@ -6,7 +6,6 @@ MyApp.get "/" do
 	erb :"home"
 end
 
-
 MyApp.get "/new" do
 	erb :"new"
 end
@@ -19,7 +18,6 @@ MyApp.post "/new/process" do
 	
 	redirect '/'
 end
-
 
 MyApp.get "/filtered" do
 	@member = params[:user]
@@ -39,14 +37,13 @@ MyApp.post "/edit" do
 	@name = params[:name]
 	@status = params[:status]
 
-
-	@task_to_edit = Tasks.new.task_to_edit(params[:task_id])
+	@task_to_edit = Task.find(params[:task_id])
 
 	erb :"edit"
 end
 
 MyApp.post "/edit/process" do
-	@edited_task = Tasks.new.edit_task(params[:task_id], params[:name], params[:description], params[:status])
+	@edited_task = Task.update_attributes(params[:task_id], params[:name], params[:description], params[:status])
 	redirect '/'
 end
 
