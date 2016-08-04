@@ -1,16 +1,3 @@
-<div>
-<p><%= User.find(1) %></p>
-<p><%= User.find(2) %></p>
-<p><%= User.find(3) %></p>
-<p><%= User.find(4) %></p>	
-</div>
-
-<div>
-<p><%= Task.delete(14) %></p>
-</div>
-
-
-
 
 
 <a href="/new">ADD A TASK</a>
@@ -30,8 +17,8 @@
 <h1>To Do List</h1>
 <% @incomplete.each do |element| %>
 	<ul>
-		<li><%= element["name"] %></li>
-		<li><%= element["description"] %></li>
+		<li><%= element.name %></li>
+		<li><%= element.description %></li>
 		<form method="post" action="/edit"> 
 			<input type="hidden" name="name" value="<%= element["name"] %>">
 			<input type="hidden" name="description" value="<%= element["description"] %>">

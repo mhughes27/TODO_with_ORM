@@ -47,6 +47,19 @@ class Task
     Task.new(record["task_id"], record["name"], record["description"], record["status"])
   end
 
+  # Save the current object to the database, and update the object with the ID
+  # that the database assigns the record.
+  # 
+  # Returns the User object.
+  def Task.save(task_id, name, description, status)
+    saved = DB.execute("INSERT INTO tasks (name, description, status) VALUES ('#{name}', '#{description}', '#{status}')")
+    records = DB.execute("SELECT * FROM tasks WHERE task_id = #{task_id}")
+    record = records[0]
+
+    Task.new(record["task_id"], record["name"], record["description"], record["status"])
+  end
+
+
   # Delete a task.
   # 
   # id - Integer of task's ID.

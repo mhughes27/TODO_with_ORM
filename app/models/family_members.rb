@@ -38,9 +38,6 @@ class User
   # Returns the User object for the record that was just deleted.
   def User.delete(family_id)
     records = DB.execute("DELETE FROM family_members WHERE family_id=#{family_id};")
-    record = records[0]
-
-    User.new(record["name"], record["family_id"])
   end
 
 

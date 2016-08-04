@@ -2,9 +2,9 @@ MyApp.get "/" do
 
 
 # basic functions
-@tasks = Tasks.new.all_tasks
-@incomplete = Tasks.new.incomplete_tasks
-@complete = Tasks.new.completed_tasks
+# @tasks = Tasks.new.all_tasks
+@incomplete = Task.new.filter1( @task_id, @name, @description, "incomplete")
+@complete = Task.new.filter1( @task_id, @name, @description, "complete")
 
 erb :"home"
 

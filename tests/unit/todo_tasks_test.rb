@@ -27,7 +27,7 @@ class TodoTest < Minitest::Test
 	def test_update_attributes
 	    last_id = DB.last_insert_row_id
 
-	    update = Task.update_attributes(1, "Mary", "Wash the cat", "complete")
+	    update = Task.update_attributes(last_id, "Mary", "Wash the cat", "complete")
 	    
 
 	    refute_nil(update)
@@ -35,6 +35,17 @@ class TodoTest < Minitest::Test
 	    assert_equal("Wash the cat", update.description)
 	    assert_equal("complete", update.status)
 	end
+
+	def test_save
+
+		saved = Task.save(2, "Mary", "Unload the diswasher", "incomplete")
+
+		refute_nil(saved)
+	    assert_equal("Mary", saved.name)
+	    assert_equal("Unload the diswasher", saved.description)
+	    assert_equal("incomplete", saved.status)
+	end
+
 
 	def test_delete
 		DB.execute("INSERT INTO tasks (name, description, status) VALUES (\"Mary\", \"Paint.\", \"complete\")")
