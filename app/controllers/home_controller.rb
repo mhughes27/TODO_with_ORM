@@ -3,7 +3,7 @@ MyApp.get "/" do
 
 
 @incomplete = Task.filter1("incomplete")
-# @complete = Task.new.filter1( @task_id, @name, @description, "complete")
+@complete = Task.filter1("complete")
 
 erb :"home"
 
