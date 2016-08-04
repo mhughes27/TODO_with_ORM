@@ -26,8 +26,8 @@ end
 
 MyApp.get "/filtered" do
 	@member = params[:user]
-	@filtered_todo = Tasks.new.filtered_todo(params[:user])
-	@filtered_done = Tasks.new. filtered_done(params[:user])
+	@filtered_todo = Task.filter2(params[:user], "incomplete")
+	@filtered_done = Task.filter2(params[:user], "complete")
 
 	erb :"filtered"
 end
