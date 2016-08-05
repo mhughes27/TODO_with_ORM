@@ -14,14 +14,14 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-08-05T09:30:56-05:00">2016-08-05T09:30:56-05:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-08-05T10:38:29-05:00">2016-08-05T10:38:29-05:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="yellow">86.13%</span></span>
+    (<span class="covered_percent"><span class="yellow">86.23%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
@@ -32,8 +32,8 @@
   <a name="AllFiles"></a>
   <div>
     <b>4</b> files in total.
-    <b>137</b> relevant lines. 
-    <span class="green"><b>118</b> lines covered</span> and
+    <b>138</b> relevant lines. 
+    <span class="green"><b>119</b> lines covered</span> and
     <span class="red"><b>19</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -83,9 +83,9 @@
       <tr>
         <td class="strong"><a href="#7c69817d0fbdd2b1fda809e2829149cf65272f4c" class="src_link" title="tests/unit/todo_tasks_test.rb">tests/unit/todo_tasks_test.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>96</td>
-        <td>54</td>
-        <td>54</td>
+        <td>98</td>
+        <td>55</td>
+        <td>55</td>
         <td>0</td>
         <td>1.3</td>
       </tr>
@@ -1431,8 +1431,8 @@
     <h3>tests/unit/todo_tasks_test.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>54</b> relevant lines. 
-      <span class="green"><b>54</b> lines covered</span> and
+      <b>55</b> relevant lines. 
+      <span class="green"><b>55</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -1881,19 +1881,19 @@
         <li class="covered" data-hits="1" data-linenumber="74">
           <span class="hits">1</span>
           
-          <code class="ruby">		assert_kind_of Array, filtered</code>
+          <code class="ruby">		assert_kind_of(Array, filtered)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="75">
+        <li class="covered" data-hits="1" data-linenumber="75">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">	     </code>
+          <code class="ruby">		assert_includes(filtered, &quot;complete&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="76">
           
           
-          <code class="ruby">	end</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="77">
@@ -1905,61 +1905,61 @@
         <li class="never" data-hits="" data-linenumber="78">
           
           
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="79">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="79">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="80">
           
-          <code class="ruby">	def test_filter2</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="80">
-          <span class="hits">1</span>
           
-          <code class="ruby">		DB.execute(&quot;INSERT INTO tasks (name, description, status) VALUES (\&quot;Mary\&quot;, \&quot;Paint.\&quot;, \&quot;complete\&quot;)&quot;)</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="81">
           <span class="hits">1</span>
           
-          <code class="ruby">		DB.execute(&quot;INSERT INTO tasks (name, description, status) VALUES (\&quot;Bob\&quot;, \&quot;Clean.\&quot;, \&quot;complete\&quot;)&quot;)</code>
+          <code class="ruby">	def test_filter2</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="82">
           <span class="hits">1</span>
           
-          <code class="ruby">		DB.execute(&quot;INSERT INTO tasks (name, description, status) VALUES (\&quot;Mary\&quot;, \&quot;Sweep.\&quot;, \&quot;complete\&quot;)&quot;)</code>
+          <code class="ruby">		DB.execute(&quot;INSERT INTO tasks (name, description, status) VALUES (\&quot;Mary\&quot;, \&quot;Paint.\&quot;, \&quot;complete\&quot;)&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="83">
           <span class="hits">1</span>
           
-          <code class="ruby">		DB.execute(&quot;INSERT INTO tasks (name, description, status) VALUES (\&quot;Mary\&quot;, \&quot;Vacuum.\&quot;, \&quot;incomplete\&quot;)&quot;)</code>
+          <code class="ruby">		DB.execute(&quot;INSERT INTO tasks (name, description, status) VALUES (\&quot;Bob\&quot;, \&quot;Clean.\&quot;, \&quot;complete\&quot;)&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="84">
           <span class="hits">1</span>
           
-          <code class="ruby">		DB.execute(&quot;INSERT INTO tasks (name, description, status) VALUES (\&quot;Lisa\&quot;, \&quot;Dust.\&quot;, \&quot;incomplete\&quot;)&quot;)</code>
+          <code class="ruby">		DB.execute(&quot;INSERT INTO tasks (name, description, status) VALUES (\&quot;Mary\&quot;, \&quot;Sweep.\&quot;, \&quot;complete\&quot;)&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="85">
           <span class="hits">1</span>
           
-          <code class="ruby">		DB.execute(&quot;INSERT INTO tasks (name, description, status) VALUES (\&quot;Joe\&quot;, \&quot;Walk.\&quot;, \&quot;incomplete\&quot;)&quot;)</code>
+          <code class="ruby">		DB.execute(&quot;INSERT INTO tasks (name, description, status) VALUES (\&quot;Mary\&quot;, \&quot;Vacuum.\&quot;, \&quot;incomplete\&quot;)&quot;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="86">
+        <li class="covered" data-hits="1" data-linenumber="86">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">		DB.execute(&quot;INSERT INTO tasks (name, description, status) VALUES (\&quot;Lisa\&quot;, \&quot;Dust.\&quot;, \&quot;incomplete\&quot;)&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="87">
           <span class="hits">1</span>
           
-          <code class="ruby">		filtered = Task.filter2(&quot;Mary&quot;, &quot;complete&quot;)</code>
+          <code class="ruby">		DB.execute(&quot;INSERT INTO tasks (name, description, status) VALUES (\&quot;Joe\&quot;, \&quot;Walk.\&quot;, \&quot;incomplete\&quot;)&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="88">
@@ -1971,46 +1971,58 @@
         <li class="covered" data-hits="1" data-linenumber="89">
           <span class="hits">1</span>
           
+          <code class="ruby">		filtered = Task.filter2(&quot;Mary&quot;, &quot;complete&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="90">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="91">
+          <span class="hits">1</span>
+          
           <code class="ruby">		refute_nil(filtered)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="90">
+        <li class="covered" data-hits="1" data-linenumber="92">
           <span class="hits">1</span>
           
-          <code class="ruby">		assert_kind_of Array, filtered</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="91">
-          
-          
-          <code class="ruby">	   </code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="92">
-          
-          
-          <code class="ruby">	end</code>
+          <code class="ruby">		assert_kind_of(Array, filtered)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="93">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">	   </code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="94">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">	end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="95">
           
           
-          <code class="ruby"># this is the end for the class</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="96">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="97">
+          
+          
+          <code class="ruby"># this is the end for the class</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="98">
           
           
           <code class="ruby">end</code>

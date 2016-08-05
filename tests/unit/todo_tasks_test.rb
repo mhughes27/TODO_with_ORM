@@ -71,8 +71,10 @@ class TodoTest < Minitest::Test
 		filtered = Task.filter1("complete")
 
 		refute_nil(filtered)
-		assert_kind_of Array, filtered
-	     
+		assert_kind_of(Array, filtered)
+		assert_includes(filtered, "complete")
+
+
 	end
 
 
@@ -87,7 +89,7 @@ class TodoTest < Minitest::Test
 		filtered = Task.filter2("Mary", "complete")
 
 		refute_nil(filtered)
-		assert_kind_of Array, filtered
+		assert_kind_of(Array, filtered)
 	   
 	end
 
