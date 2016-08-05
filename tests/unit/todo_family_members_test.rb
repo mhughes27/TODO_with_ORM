@@ -49,9 +49,11 @@ class UserTest < Minitest::Test
 		DB.execute("INSERT INTO family_members (name, email) VALUES (\"Mary\", \"fakeemail.com\")")
 		last_id = DB.last_insert_row_id
 
-	    deleted = User.delete(last_id)
+	    User.delete(last_id)
 
-	    assert_equal(deleted, [])
+	    result = DB.execute("SELECT * FROM family_members WHERE family_id = '#{last_id}'")
+
+	    assert_equal(0, result.length)
 	    
 	end
 
