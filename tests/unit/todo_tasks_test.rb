@@ -72,7 +72,7 @@ class TodoTest < Minitest::Test
 
 		refute_nil(filtered)
 		assert_kind_of(Array, filtered)
-		assert_includes(filtered, "complete")
+		assert_includes(filtered, "complete")	
 
 
 	end
