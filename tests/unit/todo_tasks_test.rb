@@ -49,11 +49,14 @@ class TodoTest < Minitest::Test
 
 	def test_delete
 		DB.execute("INSERT INTO tasks (name, description, status) VALUES (\"Mary\", \"Paint.\", \"complete\")")
+		
 		last_id = DB.last_insert_row_id
+	  
+		Task.delete(last_id)
 
-	    deleted = Task.delete(last_id)
+	    result = DB.execute("SELECT * FROM tasks WHERE task_id = #{last_id}")
 
-	    assert_equal(deleted, [])
+	    assert_equal(0, result.length)
 	    
 	end
 
