@@ -72,8 +72,10 @@ class TodoTest < Minitest::Test
 
 		refute_nil(filtered)
 		assert_kind_of(Array, filtered)
-		assert_includes(filtered, "complete")	
-
+		assert_equal(filtered.length, 3)
+		assert_equal(filtered[0].status, "complete")	
+		assert_equal(filtered[1].status, "complete")
+		assert_equal(filtered[2].status, "complete")
 
 	end
 
@@ -90,7 +92,11 @@ class TodoTest < Minitest::Test
 
 		refute_nil(filtered)
 		assert_kind_of(Array, filtered)
-	   
+		assert_equal(filtered.length, 2)
+		assert_equal(filtered[0].name, "Mary")
+		assert_equal(filtered[0].status, "complete")	
+		assert_equal(filtered[1].name, "Mary")
+		assert_equal(filtered[1].status, "complete")	   
 	end
 
 
